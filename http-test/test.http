@@ -7,8 +7,15 @@ GET http://localhost:8080/{{contextPath}}/hello/hola
 <> 2025-01-20T001854.200.txt
 
 
-###
+### 測試上傳 Base64 圖片 (local 8080)
 POST http://localhost:8080/{{contextPath}}/uploadBase64Image
+Content-Type: application/json
+
+< ../http-test-data/json-payload.json
+
+
+### 測試上傳 Base64 圖片 (docker 18080)
+POST http://localhost:18080/{{contextPath}}/uploadBase64Image
 Content-Type: application/json
 
 < ../http-test-data/json-payload.json

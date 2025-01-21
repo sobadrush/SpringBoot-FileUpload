@@ -23,7 +23,7 @@ public class FileUploadController {
         String base64EncodeStr = imageBase64.split(",")[1];
         byte[] imageByte = Base64.decodeBase64(base64EncodeStr );
         String uuid = UUID.randomUUID().toString().replace("-", "").substring(0, 5);
-        FileUtils.writeByteArrayToFile(FileUtils.getFile("/Users/roger/Desktop" + String.format("/my-image-%s.jpg", uuid)), imageByte);
+        FileUtils.writeByteArrayToFile(FileUtils.getFile("/app/uploaded_files" + String.format("/my-image-%s.jpg", uuid)), imageByte);
         return Map.of("code", "0000", "status", "success");
     }
 
