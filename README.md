@@ -21,3 +21,8 @@ docker run -itd \
 ```bash
 docker compose -f ./docker-compose.yaml up -d
 ```
+
+## nginx 設定
+```nginx
+client_max_body_size 10K; # 限制上傳文件大小 (預設 1M)
+```
